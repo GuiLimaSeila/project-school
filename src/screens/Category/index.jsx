@@ -16,6 +16,7 @@ export default function Category({ route, navigation }) {
   useEffect(() => {
     if (isFocused) {
       const schools = schoolList.getAll();
+      console.log(schools)
       setAllSchools(schools);
     }
   }, [isFocused]);

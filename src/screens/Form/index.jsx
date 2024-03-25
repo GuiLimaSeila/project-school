@@ -45,13 +45,21 @@ export default function Form({ route }) {
 
     const handleUserAction = () => {
       if (isUpdate) {
+        if(name==="" || email==="" ||    workers==="" ||  classes==="" ||  addres===""||  phone==="" ||  ceo===""){
+
+        } else {
         schoolList.update(school.id, name, email, foundation, parseInt(workers), classes, addres, parseInt(phone), ceo|| 0);
         clearInputs();
+        }
       } else {
+        if(name==="" || email==="" ||   workers==="" ||  classes==="" ||  addres===""||  phone==="" ||  ceo===""){
+
+        } else {
         const newSchool= new School(schoolId, name, email, foundation, parseInt(workers), classes, addres, parseInt(phone), ceo || 0);
         schoolId++
         schoolList.add(newSchool);
         clearInputs();
+        }
       }
       navigation.navigate("Category");
     };
