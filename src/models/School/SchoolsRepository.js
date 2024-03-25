@@ -13,6 +13,7 @@ export default class SchoolsRepository {
   
     add(school) {
       this.schools.push(school);
+      console.log(school)
     }
   
     remove(id) {

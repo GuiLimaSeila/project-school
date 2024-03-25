@@ -8,7 +8,7 @@ import SchoolsRepository from "../../models/School/SchoolsRepository";
 import { useNavigation } from "@react-navigation/native";
 
 const schoolList = new SchoolsRepository
-const schoolId = 1;
+let schoolId = 1;
 
 export default function Form({ route }) {
   let { school, edit } = 0;
@@ -48,7 +48,8 @@ export default function Form({ route }) {
         schoolList.update(school.id, name, email, foundation, parseInt(workers), classes, addres, parseInt(phone), ceo|| 0);
         clearInputs();
       } else {
-        const newSchool= new School(name, email, foundation, parseInt(workers), classes, addres, parseInt(phone), ceo || 0);
+        const newSchool= new School(schoolId, name, email, foundation, parseInt(workers), classes, addres, parseInt(phone), ceo || 0);
+        schoolId++
         schoolList.add(newSchool);
         clearInputs();
       }
@@ -82,15 +83,16 @@ export default function Form({ route }) {
     };
   return (
     <View style={styles.container}>
+      <View style={styles.detail}>
       <Title title="Form" />
       <Title title={isUpdate ? "Editar Usuário" : "Novo Usuário"} />
-      <Button title="Digite o ano da fundação da Escola" onPress={showDatePicker} />
+      <Button title="Selecione o ano da fundação da Escola" onPress={showDatePicker} />
       <DateTimePickerModal
         isVisible={isDatePickerVisible}
         mode="date"
         onConfirm={handleConfirm}
         onCancel={hideDatePicker}
-        onChange={setFoundationa}
+        onChange={setFoundation}
         value={foundation}
       />
              <TextInput
@@ -147,6 +149,7 @@ export default function Form({ route }) {
           <Text>Cancelar Edição</Text>
         </TouchableOpacity>
       )}
+      </View>
     </View>
   );
 }

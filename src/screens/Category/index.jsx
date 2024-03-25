@@ -29,6 +29,7 @@ export default function Category({ route, navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.detail}>
       <Title title="Escolha A Escola" />
       <FlatList
         data={category.items}
@@ -40,13 +41,13 @@ export default function Category({ route, navigation }) {
           {allSchools.map((school) => (
             <View key={school.id} style={styles.userItem}>
               <View>
-                <Text style={styles.userName}>{school.name}</Text>
+                <Text>{school.name}</Text>
               </View>
 
-              <View style={styles.userActions}>
+              <View>
                 <TouchableOpacity
                   style={styles.detailsButton}
-                  onPress={() => navigation.navigate("Details", { route: school })}
+                  onPress={() => navigation2.navigate("Detail", { route: school })}
                 >
                   <Text>Detalhes</Text>
                 </TouchableOpacity>
@@ -57,6 +58,7 @@ export default function Category({ route, navigation }) {
       ) : (
         <Text>Não há Escolas cadastrados</Text>
       )}
+      </View>
     </View>
   );
 }
