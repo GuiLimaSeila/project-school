@@ -6,14 +6,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#282b30",
     alignItems: "center",
     justifyContent: "center",
+    color: 'white'
   },
-  title: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    marginTop: 24,
-    color: '#7289da',
-    textDecorationLine: 'underline'
-}
+  button:{
+    padding: 10,
+    backgroundColor: "#7289da",
+    borderRadius: 5,
+  }
 });
 
 export default styles;

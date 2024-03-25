@@ -1,37 +1,26 @@
 export const categories = [
   {
     id: "1",
-    name: "Cafés",
+    name: "Escolas",
     items: [
-      { id: "1-1", name: "Expresso", description: "Descrição do Expresso" },
+      { id: "1-1", name: "SESI", description: "Descrição do SESI" },
       { id: "1-2", name: "Cappuccino", description: "Descrição do Cappuccino" },
-      { id: "1-3", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-4", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-5", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-6", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-7", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-8", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-9", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-10", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-11", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-12", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-13", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-14", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-15", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-16", name: "Latte", description: "Descrição do Latte" },
+      { id: "1-17", name: "Latte", description: "Descrição do Latte" },
+
     ],
-  },
-  {
-    id: "2",
-    name: "Bolos",
-    items: [
-      {
-        id: "2-1",
-        name: "Bolo de Chocolate",
-        description: "Descrição do Bolo de Chocolate",
-      },
-      {
-        id: "2-2",
-        name: "Bolo de Cenoura",
-        description: "Descrição do Bolo de Cenoura",
-      },
-      { id: "2-3", name: "Cheesecake", description: "Descrição do Cheesecake" },
-    ],
-  },
-  {
-    id: "3",
-    name: "Salgados",
-    items: [
-      { id: "3-1", name: "Coxinha", description: "Descrição da Coxinha" },
-      { id: "3-2", name: "Empada", description: "Descrição da Empada" },
-      { id: "3-3", name: "Quiche", description: "Descrição do Quiche" },
-    ],
+    icon: "school",
   },
 ];
