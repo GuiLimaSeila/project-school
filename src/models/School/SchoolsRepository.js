@@ -12,8 +12,9 @@ export default class SchoolsRepository {
     }
   
     add(school) {
+      console.log("Recebendo?", school);
       this.schools.push(school);
-      console.log(school)
+      console.log("Lista atualizada", this.schools)
     }
   
     remove(id) {
@@ -37,4 +38,3 @@ export default class SchoolsRepository {
       return school;
     }
   }
-  

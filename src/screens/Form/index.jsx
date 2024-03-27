@@ -43,7 +43,7 @@ export default function Form({ route }) {
       }
     }, [school, edit]);
 
-    const handleUserAction = () => {
+    const handleSchoolAction = () => {
       if (isUpdate) {
         if(name==="" || email==="" ||    workers==="" ||  classes==="" ||  addres===""||  phone==="" ||  ceo===""){
 
@@ -56,6 +56,7 @@ export default function Form({ route }) {
 
         } else {
         const newSchool= new School(schoolId, name, email, foundation, parseInt(workers), classes, addres, parseInt(phone), ceo || 0);
+        console.log("Criando escola", newSchool);
         schoolId++
         schoolList.add(newSchool);
         clearInputs();
@@ -148,8 +149,8 @@ export default function Form({ route }) {
           value={ceo}
         />
 
-<TouchableOpacity style={styles.button} onPress={handleUserAction}>
-        <Text>{isUpdate ? "Salvar Alterações" : "Criar Usuário"}</Text>
+<TouchableOpacity style={styles.button} onPress={handleSchoolAction}>
+        <Text>{isUpdate ? "Salvar Alterações" : "Criar Escola"}</Text>
       </TouchableOpacity>
 
       {isUpdate && (

@@ -5,7 +5,7 @@ import styles from "./styles";
 import Title from "../../components/Title";
 import SchoolsRepository from "../../models/School/SchoolsRepository";
 
-const schoolList = new SchoolsRepository
+const schoolList = new SchoolsRepository()
 
 export default function Category({ route, navigation }) {
   const { category } = route.params;
@@ -16,8 +16,9 @@ export default function Category({ route, navigation }) {
   useEffect(() => {
     if (isFocused) {
       const schools = schoolList.getAll();
-      console.log(schools)
+      console.log("Array de escolas",schools)
       setAllSchools(schools);
+      console.log("Array de escolas",allSchools)
     }
   }, [isFocused]);
 
